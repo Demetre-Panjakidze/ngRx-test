@@ -1,0 +1,16 @@
+ul {
+  padding: 0;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  li {
+    list-style: none;
+  }
+}
+
+h3,
+p {
+  margin: 20px;
+}

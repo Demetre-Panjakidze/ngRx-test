@@ -1,16 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
+import { StoreModule } from '@ngrx/store';
+import { collectionReducer } from './state/collecton.reducer';
+import { AppState } from './state/app.state';
+import { movieReducer } from './state/movie.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { MovieEffects } from './state/movie.effects';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    StoreModule.forRoot<AppState>({
+      collection: collectionReducer,
+      movies: movieReducer,
+    }),
+    EffectsModule.forRoot([MovieEffects]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
