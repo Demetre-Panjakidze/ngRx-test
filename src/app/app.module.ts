@@ -3,11 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
-import { collectionReducer } from './state/collecton.reducer';
+import { collectionReducer } from './state/collection/collecton.reducer';
 import { AppState } from './state/app.state';
-import { movieReducer } from './state/movie.reducer';
+import { movieReducer } from './state/movie/movie.reducer';
 import { EffectsModule } from '@ngrx/effects';
-import { MovieEffects } from './state/movie.effects';
+import { MovieEffects } from './state/movie/movie.effects';
 
 @NgModule({
   declarations: [AppComponent],

@@ -11,4 +11,8 @@ export class MovieApiService {
   getMovies() {
     return this.http.get<Movie[]>('http://localhost:3000/movies');
   }
+
+  getCollection() {
+    return this.http.get<Movie[]>('http://localhost:3000/collection');
+  }
 }

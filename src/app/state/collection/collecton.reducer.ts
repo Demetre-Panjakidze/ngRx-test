@@ -1,7 +1,6 @@
 import { createReducer, on } from '@ngrx/store';
-import { Movie } from '../models/movie.model';
+import { Movie } from '../../models/movie.model';
 import { CollectionActions } from './collection.actions';
-
 const initialState: Movie[] = [];
 
 export const collectionReducer = createReducer(
