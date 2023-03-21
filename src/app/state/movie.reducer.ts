@@ -1,5 +1,4 @@
 import { createReducer, on } from '@ngrx/store';
-import { Movie } from '../models/movie.model';
 import { MoviesState } from './app.state';
 import { loadMoviesFail, loadMoviesSuccess } from './movie.action';
 
